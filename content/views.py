@@ -5,7 +5,7 @@ from rest_framework.views import APIView
 from .models import Feed, Reply, Like, Bookmark
 from user.models import User
 import os
-from Jinstagram.settings import MEDIA_ROOT
+from Joostagram.settings import MEDIA_ROOT
 
 
 class Main(APIView):
@@ -46,7 +46,7 @@ class Main(APIView):
                                   ))
 
 
-        return render(request, "jinstagram/main.html", context=dict(feeds=feed_list, user=user))
+        return render(request, "joostagram/main.html", context=dict(feeds=feed_list, user=user))
 
 
 class UploadFeed(APIView):
